@@ -1,0 +1,280 @@
+<!DOCTYPE html> <!--declare that this is an HTML 5 document-->
+<html lang="en"> <!--this is the root element of an html page-->
+   <head> <!--contains meta information of the html page-->
+      <meta charset="UTF-8"> <!--this make possible to use characters and emojis which not including in traditional ASCII character set-->
+      <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--this tag is crucial for creating responsive web designs
+      which works on various devices.viewport is the user's visible area.
+      Width=device-width,sets the width of the page according to the width of the device. 
+      Initial-scale sets initial zoom level when the page is first loaded by the browser-->
+      <title>Shop</title> <!--title of the html page-->
+      <link rel="stylesheet" href="shop.css"> <!--link to external style sheet for shop-->
+      <link rel="stylesheet" href="template.css"> <!--link to external style sheet for template-->
+   </head>
+   <body id="shop-body"> <!--visible part of the html page-->
+      <header> <!--header of the web page-->
+         <div class="logo"> <!--logo of the website-->
+            <img src="logo.png" alt="Life-Below-Water-logo">
+            <h1>Life Below Water</h1>   
+         </div>     
+         <nav class="nav"> <!--navigation bar of the website-->
+            <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <ul class="nav-menu">
+               <li><a href="home.html">Home</a></li> <!--link to home page-->
+               <li><a href="gallery.html">Gallery</a></li> <!--link to gallery-->
+               <li><a href="shop.html" class="active">Shop</a></li>  <!--link to shop-->
+               <li><a href="profile.html">Profile</a></li>  <!--link to profile-->
+               <li><a href="feedback.html">Feedback</a></li> <!--link to feedback-->
+               <li><a href="sitemap.html">Sitemap</a></li>  <!--link to sitemap-->
+               <li><a href="team.html">Team</a></li>  <!--link to team-->
+            </ul>
+         </nav>
+      </header>
+      <div class="product-showcase"> <!--container for the product showcase-->
+         <div class="product-card"> <!--individual product card-->
+            <img src="Marinelife.png" alt="marine-life-wall-art" class="product-image"> <!--product image-->
+            <h3 class="imgname">Pure Marine Life</h3> <!--product name-->
+            <p class="imgdescribe">A wall art about life below water</p> <!--product description-->
+            <p class="price">$49.99</p> <!--product price-->
+            <label for="quantity1">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity1" id="quantity1" value="1" min="1" max="10"><br>
+            <label for="size1">Size</label> <!--size label and dropdown selection-->
+               <select name="Size1" id="size1">
+                  <option value="Small">Small(10"×12")</option>
+                  <option value="Medium">Medium(18"×22")</option>
+                  <option value="Large">Large(22"×34")</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button1" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Mermaid-souvernir.png" alt="mermaid-souvernir" class="product-image"> <!--product image-->
+            <h3 class="imgname">Mermaid on the Hope</h3> <!--product name-->
+            <p class="imgdescribe">An eye catching souvernir to table</p> <!--product description-->
+            <p class="price">$29.99</p> <!--product price-->
+            <label for="quantity2">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity2" id="quantity2" value="1" min="1" max="10"><br>
+            <label for="color1">Color</label> <!--color label and dropdown selection-->
+               <select name="Color1" id="color1">
+                  <option value="Gold">Gold</option>
+                  <option value="Silver">Silver</option>
+                  <option value="Bronze">Bronze</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button2" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Metal-work.png" alt="turtle-metal-handicraft" class="product-image"> <!--product image-->
+            <h3 class="imgname">Turtle and Seahorse Friends</h3> <!--product name-->
+            <p class="imgdescribe">Marine themed metal handicraft</p> <!--product description-->
+            <p class="price">$35</p> <!--product price-->
+            <label for="quantity3">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity3" id="quantity3" value="1" min="1" max="10"><br>
+            <label for="color2">Color</label> <!--color label and dropdown selection-->
+               <select name="Color2" id="color2">
+                  <option value="Blue">Blue</option>
+                  <option value="Silver">Silver</option>
+                  <option value="Multicolor">Multicolor</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button3" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Secret-of-the-sea.png" alt="story-book-for-children" class="product-image"> <!--product image-->
+            <h3 class="imgname">Explore Secrets of the Sea</h3> <!--product name-->
+            <p class="imgdescribe">A story book which is about the sea</p> <!--product description-->
+            <p class="price">$7.99</p> <!--product price-->
+            <label for="quantity4">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity4" id="quantity4" value="1" min="1" max="10"><br>
+            <input type="button" value="Add to basket" name="button4" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Whale-pencil-case.png" alt="whale-pencilcase" class="product-image"> <!--product image-->
+            <h3 class="imgname">Whale Pencil Case</h3> <!--product name-->
+            <p class="imgdescribe">Pencil case for whale lovers</p> <!--product description-->
+            <p class="price">$5.99</p> <!--product price-->
+            <label for="quantity5">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity5" id="quantity5" value="1" min="1" max="10"><br>
+            <label for="color3">Color</label> <!--color label and dropdown selection-->
+               <select name="Color3" id="color3">
+                  <option value="Blue">Blue</option>
+                  <option value="Pink">Pink</option>
+                  <option value="Black and white">Black and white</option>
+                  <option value="White and grey">White and grey</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button5" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Seashell-earings.png" alt="seashell-earings" class="product-image"> <!--product image-->
+            <h3 class="imgname">Seashell Earings</h3> <!--product name-->
+            <p class="imgdescribe">Ocean's beauty scallop seashell earings</p> <!--product description-->
+            <p class="price">$44.99</p> <!--product price-->
+            <label for="quantity6">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity6" id="quantity6" value="1" min="1" max="10"><br>
+            <label for="size2">Size</label> <!--size label and dropdown selection-->
+               <select name="Size2" id="size2">
+                  <option value="Small">Small(4cm)</option>
+                  <option value="Medium">Medium(6cm)</option>
+               </select><br>
+            <label for="metal1">Metal</label> <!--metal label and dropdown selection-->
+               <select name="Metal1" id="metal1">
+                  <option value="Gold Plated">Gold Plated</option>
+                  <option value="Yellow gold">Yellow Gold</option>
+                  <option value="Rose Gold">Rose Gold</option>
+                  <option value="White Gold">White Gold</option>
+                  <option value="Sterling Silver">Sterling Silver</option>
+               </select><br>
+            <label for="color4">Color</label> <!--color label and dropdown selection-->
+               <select name="Color4" id="color4">
+                  <option value="Fuchsia Pink">Fuchsia Pink</option>
+                  <option value="Seafoam Green">Seafoam Green</option>
+                  <option value="Tufts Blue">Tufts Blue</option>
+                  <option value="Gold">Gold</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button6" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Seashell-necklace.png" alt="seashell-necklace" class="product-image"> <!--product image-->
+            <h3 class="imgname">Mermaid Style Seashell Necklace</h3> <!--product name-->
+            <p class="imgdescribe">Natural seashell necklace,conch necklace for woman</p> <!--product description-->
+            <p class="price">$59.99</p> <!--product price-->
+            <label for="quantity7">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity7" id="quantity7" value="1" min="1" max="10"><br>
+            <label for="size3">Size</label> <!--size label and dropdown selection-->
+               <select name="Size3" id="size3">
+                  <option value="Upto 6.9in">Upto 6.9 in</option>
+                  <option value="13.0 to 19.0 in">13.0 to 19.0 in</option>
+                  <option value="above 19.0 in">above 19.0 in</option>
+               </select><br>
+            <label for="metal2">Metal</label> <!--metal label and dropdown selection-->
+               <select name="Metal2" id="metal2">
+                  <option value="Gold Plated">Gold Plated</option>
+                  <option value="Yellow gold">Yellow Gold</option>
+                  <option value="Rose Gold">Rose Gold</option>
+                  <option value="White Gold">White Gold</option>
+                  <option value="Sterling Silver">Sterling Silver</option>
+               </select><br>
+            <label for="color5">Color</label> <!--color label and dropdown selection-->
+               <select name="Color5" id="color5">
+                  <option value="Fuchsia Pink">Fuchsia Pink</option>
+                  <option value="Seafoam Green ">Seafoam Green</option>
+                  <option value="Blue">Blue</option>
+                  <option value="Multicolor">Multicolor</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button7" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Seahorse-bag.png" alt="seahorse-bag" class="product-image"> <!--product image-->
+            <h3 class="imgname">Seahorse bag</h3> <!--product name-->
+            <p class="imgdescribe">Marine themed recycle bag</p> <!--product description-->
+            <p class="price">$6.99</p> <!--product price-->
+            <label for="quantity8">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity8" id="quantity8" value="1" min="1" max="10"><br>
+            <label for="color6">Color</label> <!--color label and dropdown selection-->
+               <select name="Color6" id="color6">
+                  <option value="Blue">Blue</option>
+                  <option value="Green">Green</option>
+                  <option value="Yellow">Yellow</option>
+                  <option value="Pink">Pink</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button8" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Marine-table-deco.png" alt="tabel-decoration" class="product-image"> <!--product image-->
+            <h3 class="imgname">Turtle Family</h3> <!--product name-->
+            <p class="imgdescribe">Marine inspired table decoration</p> <!--product description-->
+            <p class="price">$7.99</p> <!--product price-->
+            <label for="quantity9">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity9" id="quantity9" value="1" min="1" max="10"><br>
+            <input type="button" value="Add to basket" name="button9" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Mermaid-dress.png" alt="mermaid-dress" class="product-image"> <!--product image-->
+            <h3 class="imgname">The Dress of the Dreamer</h3> <!--product name-->
+            <p class="imgdescribe">Mermaid costume princess dressup with accessories</p> <!--product description-->
+            <p class="price">$19.99</p> <!--product price-->
+            <label for="quantity10">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity10" id="quantity10" value="1" min="1" max="10"><br>
+            <label for="size4">Size</label> <!--size label and dropdown selection-->
+               <select name="Size4" id="size4">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+               </select><br>
+            <label for="color7">Color</label> <!--color label and dropdown selection-->
+               <select name="Color7" id="color7">
+                  <option value="Aqua">Aqua</option>
+                  <option value="Lavender">Lavender</option>
+                  <option value="Fuchsia">Fuchsia</option>
+                  <option value="Azure">Azure</option>
+                  <option value="Violet">Violet</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button10" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="Mermaid-art.png" alt="mermaid-wall-art" class="product-image"> <!--product image-->
+            <h3 class="imgname">Moon Fairy</h3> <!--product name-->
+            <p class="imgdescribe">Enchanting night sky with a little mermaid</p> <!--product description-->
+            <p class="price">$35</p> <!--product price-->
+            <label for="quantity11">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity11" id="quantity11" value="1" min="1" max="10"><br>
+            <label for="size5">Size</label> <!--size label and dropdown selection-->
+               <select name="Size5" id="size5">
+                  <option value="Small">Small(10"×12")</option>
+                  <option value="Medium">Medium(18"×22")</option>
+                  <option value="Large">Large(22"×34")</option>
+               </select><br>
+            <input type="button" value="Add to basket" name="button11" class="add-button"> <!--add to basket button-->
+         </div>
+         <div class="product-card"> <!--individual product card-->
+            <img src="children-storybook.png" alt="book-for-toddlers" class="product-image"> <!--product image-->
+            <h3 class="imgname">Earth's incredible oceans</h3> <!--product name-->
+            <p class="imgdescribe">A story book for toddlers about oceans on earth</p> <!--product description-->
+            <p class="price">$6</p> <!--product price-->
+            <label for="quantity12">Quantity</label> <!--quantity label and input feild-->
+            <input type="number" name="quantity12" id="quantity12" value="1" min="1" max="10"><br>
+            <input type="button" value="Add to basket" name="button12" class="add-button"> <!--add to basket button-->
+         </div>
+      </div> 
+      <div class="basket"> <!--container for the basket-->
+         <h3>Basket</h3>
+         <h4>Here is your order summary</h4>
+         <div class="basket-items-wrapper"> <!--container for the basket items-->
+            <ul id="basket-items"></ul> <!--list of basket items-->
+         </div>
+         <p id="total">Total:$&nbsp;<span id="amount">0.00</span></p> <!--total amount-->
+         <hr>
+         <div class="persn"> <!--container for customer name and email-->
+            <form id ="shop-form">
+               <label for="nme">Name :</label><br> <!--label for customer name-->
+               <input type="text" name="nme" id="nme" required> <!--input feild for customer name-->
+               <span id="nameError" style="color:red;"></span>
+               <br>
+               <br>
+               <label for="mail">Email :</label><br> <!--label for customer email-->
+               <input type="email" name="mail" id="mail" required> <!--input feild for customer email-->
+               <span id="emailError" style="color:red;"></span>
+               <br>
+               <br>
+               <input type="checkbox" name="chck" id="chck"> <!--checkbox for confirming to proceed to checkout-->
+               <label for="chck">Confirm to proceed to checkout</label> <!--label for the checkbox-->
+               <br><br>
+               <button type="submit" id="checkout-button">Checkout</button> <!--checkout button-->
+            </form>
+         </div>
+      </div>  
+      <!--links to external JavaScript files for functionality--> 
+      <script src="shop.js"></script>
+      <script src="shopbutton.js"></script>
+      <script>
+         // Add event listener to nav toggle button
+         document.getElementById('nav-toggle').addEventListener('click', function() {
+             document.querySelector('.nav-menu').classList.toggle('show');
+         });
+     </script>
+      <footer> <!--footer of the webpage-->
+         <p>&copy; 2024 SDG Website. All rights reserved.</p> 
+         <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p> <!--links to editor pages-->
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,73 @@
+#splash-body {
+    background-color: rgb(145, 219, 242); /*set the background color of body of the page*/
+}
+#splash {
+    position: fixed; /*position relative to the viewport;position will not be changed even the page is scrolled*/
+    display: flex; /*display elements as a block-level flex container*/
+    align-items: center;  /*vertically centers the items*/
+    justify-content: center; /*horizontally centers the items*/
+    height: 100vh; /*set the height*/
+    width:100%; /*set the width */
+}
+
+.splash-content {
+    text-align: center; /*center the text inside the splash screen*/
+    opacity:0; /*opacity level of the splash content*/
+    animation:fadeIn 1s forwards ; /*create an animation for appearence of the splash content*/
+}
+ @keyframes fadeIn {   /*keyframes for fadeIn animation*/
+    from{opacity: 0;}
+    to{ opacity:1; }
+} 
+#logo {
+    height:150px; /*set the height of the logo*/
+    padding:0; /*set the padding to none*/
+    float:left; /*set image to left side*/
+}
+#web-title {
+    font-family:Georgia, 'Times New Roman', Times, serif; /*specify the font type of the text*/
+    color: rgb(21, 21, 170); /*set the font color*/
+    font-size: 50px; /*set the font size*/
+}
+#web-mission {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*specify the font type of the text*/
+    color: rgba(7, 10, 123, 0.863); /*set the font color*/
+    font-size: 20px; /*set the font size*/
+    margin-left: 50px; /*keep space from left*/
+}
+#memtitle,#memberlist {
+    font-family: Arial, Helvetica, sans-serif; /*specify the font type of the text*/
+}
+#memtitle {
+    font-size: 20px; /*set the font size*/
+}
+#memberlist {
+    list-style-type: none; /*set the list style type to none*/
+    font-size: 17px; /*set the font size*/
+    padding:5px; /*create a space around elements content*/
+}
+#load-image {
+  width:280px; /*set the width of the image*/
+  margin-top: 5px; /*keep a space between content and the image*/
+  margin-left: 80px; /*keep space from left*/
+}
+.loader {
+  position:absolute; /*position relative to the nearest positioned ancestor*/
+  top:45%; /*move the element down from the top edge of its containing block by 45% of height */
+  left:45%; /*move the element to right from the left edge of its containing block by 45% of width */
+  border:4px solid rgb(165, 163, 163); /*border shortcut-width,style and color*/
+  border-radius:50%; /*make it a circle*/
+  border-top:4px solid rgb(41, 41, 171); /*border shortcut for spin part-width,style and color*/
+  width: 30px; /*set the width of spinner*/
+  height: 30px; /*set the height of spinner*/
+  animation:spin 2s linear infinite; /*create an animation for loader*/
+}
+.loader-container {
+  position: relative; /*position relative to it's normal position*/
+  display: inline-block; /*display elements as an inline-level block container*/
+}
+ /*keyframes for spin aniimation*/
+@keyframes spin { 
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+} 

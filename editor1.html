@@ -1,0 +1,106 @@
+<!DOCTYPE html> <!--html 5 document-->
+<html lang="en"> <!--root element of an html page-->
+    <head>
+        <meta charset="UTF-8"> <!--this make possible to use characters and emojis which not including in traditional ASCII character set-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--this tag is crucial for creating responsive web designs
+        which works on various devices.viewport is the user's visible area.
+        Width=device-width,sets the width of the page according to the width of the device. 
+        Initial-scale sets initial zoom level when the page is first loaded by the browser-->
+        <title>Student 1</title> <!--title of the page-->
+        <style> /*embeddded style sheet for editor page*/
+            h1 {
+                font-size: 35px; /*set the font size*/
+            }
+            h1,#page-details {
+                font-family:Georgia, 'Times New Roman', Times, serif; /*specify the font type of the text*/
+                background-color: rgb(154, 244, 154); /*set the background color*/
+            }
+            #editor-title {
+                margin-top: 40px; /*keep space from top of the element*/
+            }
+            #editor-title,#page-details {
+                text-align: center; /*center the text inside the element*/
+            }
+            h4 {
+                font-size: 20px; /*set the font size*/
+            }
+            #page-details {
+                margin-bottom: 30px; /*set a space below the container*/
+                padding-bottom: 40px; /*set the padding*/
+            }
+            .subcontainer {
+                margin-left: 150px; /*keep space from left of the element*/
+                margin-right: 150px; /*keep space from right of the element*/
+            }
+            #page-details p {
+                line-height: 1.5; /*set line spacing for user readability*/
+                font-size: 18px; /*set the font size*/
+            }
+            #page1 {
+                margin-top: 30px; /*keep space from top of the element*/
+            }
+            #page0,#page1,#page2,#page3 {
+                font-size: 25px; /*set the font size*/
+            }
+            a {
+                color:blue; /*set the link color*/
+                font-size: 18px; /*set the text size of link*/
+            }  
+            a:hover {
+                color:rgb(161, 37, 223);
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="editor-title"> <!--container for title and student details-->
+            <h1><b>Page Editor</b></h1><br>
+            <hr>
+            <h4><i>Name: Senuvi Minothma Dayananda</i></h4>
+            <h4><i>Role: Student 1</i></h4>
+            <h4><i>The following pages were edited by me!</i></h4>
+            <hr>
+            <br>
+        </div>
+        <div id="page-details"> <!--container for list of completed tasks and links-->
+            <img src="pencil.gif" alt="pencil" class="pencil-image"> <!--gif image-->
+            <br>
+            <div class="subcontainer"> <!--container for details of the topic-->
+                <h4 id="page0">Splash Screen</h4>
+                <p>
+                   Created a splash screen featuring the website title, mission , logo and group members.
+                   After 4 seconds, it automatically redirects the user to the home page. An animated image and loader indicate that
+                   the home page is loading. Splash content is enhanced with an animation (fade-In).
+                </p> 
+                <a href="splash.html" target="_blank">link to Splash Screen</a> <!--link to the splash screen-->
+                <br><br>
+            </div>
+            <div class="subcontainer"> <!--container for details of the topic-->
+                <h4 id="page1">Shop</h4>
+                <p>
+                   Created a product showcase using HTML,CSS and Javascript along with the products for fundraising 
+                   for the UN sustainability goal 'Life Below Water'. Enhanced functionality of adding products to the basket 
+                   using Javascript.Prompts the user to select at least one item before proceeding to the checkout section.
+                </p>
+                <a href="shop.html">link to Shop</a> <!--link to the page-->
+                <br><br>
+            </div>
+            <div class="subcontainer"> <!--container for details of the topic-->
+                <h4 id="page2">Checkout</h4>
+                <p>
+                  Created a checkout section to finalise user purchases using HTML,CSS and Javascript. Mandatory fields are indicated.
+                  Enhanced validation checks and correction of the incorrect user inputs using Javascript. Before confirming the order, the system 
+                  provides a message to the user about the completion of the order. Enhanced checkout process with clear instructions and feedback.
+                </p>
+                <a href="checkout.html">link to Checkout section</a> <!--link to the page-->
+                <br><br>
+            </div>
+            <div class="subcontainer"> <!--container for details of the topic-->
+               <h4 id="page3">Content page - Marine Archaeology</h4>
+               <p>
+                 Created an additional content page using HTML and CSS about 'Marine Archaeology'.
+               </p>
+               <a href="page2.html">link to Additional Content page</a> <!--link to the page-->
+            </div>
+        </div>
+    </body>
+</html>

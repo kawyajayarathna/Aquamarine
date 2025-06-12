@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Development Goal 14</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Life Below Water logo" >
+            <h1>Life Below Water</h1>   
+        </div>     
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>    
+            <ul class="nav-menu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mission">
+            <div class="icon-title">
+                <img src="logo1.png" alt="Life Below Water Logo1" class="left-image">
+                <h2>Goal 14: Life Below Water</h2>
+            </div>     
+            <div class="content">
+                <p class="mission-statement">OUR MISSION IS TO CONSERVE AND SUSTAINABLY USE THE OCEANS, SEAS AND MARINE RESOURCES FOR SUSTAINABLE DEVELOPMENT.</p>
+                <p class="additional-text">Healthy oceans and seas are essential to our existence.They cover 70 percent of our planet and we rely on them for food, energy and water. Yet, we have managed to do tremendous damage to these precious resources. We must protect them by eliminating pollution and overfishing and immediately start to responsibly manage and protect all marine life around the world.</p>
+            </div>    
+        </section>
+
+        <section class="content-links">
+            <h2>Explore Our Content</h2>
+            <div class="flex-container">
+                <div class="tile" onclick="location.href='page1.html'">
+                    <div class="tile-background" style="background-image: url('marine-life.webp');"></div>
+                    <div class="tile-content">
+                        <h2>Marine Life</h2>
+                        <p>Explore about the wonders of marine life.</p>
+                        <a href="page1.html" class="read-more">READ MORE + </a>
+                    </div>
+                </div>    
+                <div class="tile" onclick="location.href='page2.html'">
+                    <div class="tile-background" style="background-image: url('maritime-archaeology.png');"></div>
+                    <div class="tile-content">
+                        <h2>Marine Archaeology</h2>
+                        <p>Discover the secrets of marine archaeology.</p>
+                        <a href="page2.html" class="read-more">READ MORE + </a>
+                    </div>
+                </div>    
+                <div class="tile" onclick="location.href='page3.html'">
+                    <div class="tile-background" style="background-image: url('marine-pollution.png');"></div>
+                    <div class="tile-content">
+                        <h2>Marine Pollution</h2>
+                        <p>Explore the effects of marine pollution.</p>
+                        <a href="page3.html" class="read-more">READ MORE + </a>
+                    </div>
+                </div>    
+                <div class="tile" onclick="location.href='page4.html'">
+                    <div class="tile-background" style="background-image: url('take-action.png');"></div>
+                    <div class="tile-content">
+                        <h2>Take Action</h2>
+                        <p>Take actions to protect our oceans.</p>
+                        <a href="page4.html" class="read-more">READ MORE + </a>
+                    </div>
+                </div>    
+            </div>    
+        </section>
+    </main>
+
+    <script>
+        // Add event listener to nav toggle button
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+</body>
+</html>

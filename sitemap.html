@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="template.css">
+   <link rel="stylesheet" href="sitemap.css">
+    <title>Sitemap - Life Below Water</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/logo.png" alt="Life Below Water logo">
+            <h1>Life Below Water</h1>
+        </div>
+        
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html" class="active">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sitemap-container">
+            <h1 class="sitemap-title">Website Sitemap</h1>
+            
+            <svg class="sitemap-svg" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- Define gradients for neumorphic effect -->
+                <defs>
+                    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                        <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.5" />
+                        <stop offset="100%" style="stop-color:#90caf9;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Connection Lines - Horizontal from main to level 1 -->
+                <line class="connection-line" x1="600" y1="80" x2="600" y2="110" style="animation-delay: 0.2s"/>
+                
+                <!-- Vertical distributor line -->
+                <line class="connection-line" x1="100" y1="150" x2="1000" y2="150" style="animation-delay: 0.4s"/>
+
+                <!-- Vertical lines to main nodes -->
+                <line class="connection-line" x1="100" y1="150" x2="100" y2="180" style="animation-delay: 0.6s"/>
+                <line class="connection-line" x1="250" y1="150" x2="250" y2="180" style="animation-delay: 0.7s"/>
+                <line class="connection-line" x1="400" y1="150" x2="400" y2="180" style="animation-delay: 0.8s"/>
+                <line class="connection-line" x1="550" y1="150" x2="550" y2="180" style="animation-delay: 0.9s"/>
+                <line class="connection-line" x1="700" y1="150" x2="700" y2="180" style="animation-delay: 1.0s"/>
+                <line class="connection-line" x1="850" y1="150" x2="850" y2="180" style="animation-delay: 1.1s"/>
+                <line class="connection-line" x1="1000" y1="150" x2="1000" y2="180" style="animation-delay: 1.2s"/>
+                
+                <!-- Vertical line from Home to distributor -->
+                <line class="connection-line-thin" x1="100" y1="240" x2="100" y2="270" style="animation-delay: 1.4s"/>
+                
+                <!-- Horizontal distributor for Home subsections - FIXED LENGTH -->
+                <line class="connection-line-thin" x1="40" y1="310" x2="280" y2="310" style="animation-delay: 1.5s"/>
+                
+                <!-- Vertical lines to Home subsections - FIXED POSITIONS -->
+                <line class="connection-line-thin" x1="40" y1="310" x2="40" y2="340" style="animation-delay: 1.6s"/>
+                <line class="connection-line-thin" x1="120" y1="310" x2="120" y2="340" style="animation-delay: 1.7s"/>
+                <line class="connection-line-thin" x1="200" y1="310" x2="200" y2="340" style="animation-delay: 1.8s"/>
+                <line class="connection-line-thin" x1="280" y1="310" x2="280" y2="340" style="animation-delay: 1.9s"/>
+                
+                <!-- Vertical line from Home -->
+                <line class="connection-line" x1="600" y1="110" x2="600" y2="150" style="animation-delay: 0.5s"/>
+
+                <!-- Main Node - Aquamarine -->
+                <rect class="neuro-node main-node" x="520" y="40" width="160" height="60" rx="15" ry="15" 
+                      fill="url(#mainGradient)" style="animation-delay: 0.1s"/>
+                <text class="node-text" x="600" y="78" text-anchor="middle" font-size="16" font-weight="bold" fill="#0077be">Aquamarine</text>
+
+                <!-- First Level Nodes with increased spacing -->
+                <rect class="neuro-node primary-node" x="20" y="200" width="160" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 0.3s"/>
+                <text class="node-text" x="100" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Home</text>
+
+                <rect class="neuro-node primary-node" x="200" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 0.5s"/>
+                <text class="node-text" x="250" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Gallery</text>
+
+                <rect class="neuro-node primary-node" x="350" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 0.7s"/>
+                <text class="node-text" x="400" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Shop</text>
+
+                <rect class="neuro-node primary-node" x="500" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 0.9s"/>
+                <text class="node-text" x="550" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Profile</text>
+
+                <rect class="neuro-node primary-node" x="650" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 1.1s"/>
+                <text class="node-text" x="700" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Feedback</text>
+
+                <rect class="neuro-node primary-node" x="800" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 1.3s"/>
+                <text class="node-text" x="850" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">About Us</text>
+
+                <rect class="neuro-node primary-node" x="950" y="200" width="100" height="40" rx="12" ry="12" 
+                      fill="url(#primaryGradient)" style="animation-delay: 1.5s"/>
+                <text class="node-text" x="1000" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#0077be">Team</text>
+
+                <!-- Home Sub-sections with FIXED POSITIONS to align with vertical lines -->
+                <rect class="neuro-node secondary-node" x="5" y="360" width="70" height="35" rx="10" ry="10" 
+                      fill="url(#secondaryGradient)" style="animation-delay: 1.7s"/>
+                <text class="node-text" x="40" y="375" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Marine</text>
+                <text class="node-text" x="40" y="387" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Life</text>
+
+                <rect class="neuro-node secondary-node" x="85" y="360" width="70" height="35" rx="10" ry="10" 
+                      fill="url(#secondaryGradient)" style="animation-delay: 1.9s"/>
+                <text class="node-text" x="120" y="375" text-anchor="middle" font-size="9" font-weight="bold" fill="#0077be">Marine</text>
+                <text class="node-text" x="120" y="387" text-anchor="middle" font-size="9" font-weight="bold" fill="#0077be">Archeology</text>
+
+                <rect class="neuro-node secondary-node" x="165" y="360" width="70" height="35" rx="10" ry="10" 
+                      fill="url(#secondaryGradient)" style="animation-delay: 2.1s"/>
+                <text class="node-text" x="200" y="375" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Marine</text>
+                <text class="node-text" x="200" y="387" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Pollution</text>
+
+                <rect class="neuro-node secondary-node" x="245" y="360" width="70" height="35" rx="10" ry="10" 
+                      fill="url(#secondaryGradient)" style="animation-delay: 2.3s"/>
+                <text class="node-text" x="280" y="375" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Take</text>
+                <text class="node-text" x="280" y="387" text-anchor="middle" font-size="10" font-weight="bold" fill="#0077be">Action</text>
+
+                <!-- Decorative floating elements -->
+                <circle cx="1100" cy="450" r="4" fill="#7dd3fc" opacity="0.4">
+                    <animate attributeName="cy" values="450;445;450" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="50" cy="480" r="3" fill="#40a9ff" opacity="0.3">
+                    <animate attributeName="cy" values="480;475;480" dur="2.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.5s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </main>
+<script src="sitemap.js"></script>
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+</body>
+</html>

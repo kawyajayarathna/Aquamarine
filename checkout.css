@@ -1,0 +1,74 @@
+#checkout-body {
+    font-family:'Times New Roman', Times, serif; /*specify the font type of the text*/
+    background-color: rgb(170, 220, 242); /*set the background color*/
+    margin:0; /*remove default margin*/
+}
+#heading-container {
+    text-align: center; /*center the text inside the heading container*/
+    margin:10px; /*sets margin on all sides of the element*/
+    font-size: 17px; /*set the font size*/
+}
+#heading-container,#details1,#details2,#details3,#order-details {
+    background-color: rgb(236, 246, 251); /*set the background color*/
+    border:2px solid rgb(48, 46, 46); /*border shortcut-width ,style and color*/
+    border-radius: 12px; /*radius of the corner of the border*/
+    margin-bottom: 20px; /*set a space below the container*/
+}
+#main-container {
+    padding-right: 100px; /*keep space from right side*/
+}
+
+#details1,#details2,#details3,#order-details {
+    
+    padding: 20px; /*create a space around elements content*/
+}
+#details1,#details2,#details3 {
+    width:470px; /*set the element width*/
+    font-size: 17px; /*set the font size*/
+    margin-left: 30px; /*keep space from left margin*/
+}
+#order-details {
+    position: absolute; /*position relative to the nearest positioned ancestor*/
+    top:300px; /*sets the element 300px from the top of its container*/
+    right:20px; /*sets the element 20px from the right edge of its container*/
+    width:350px; /*set the container width */
+    height: 450px; /*set the height*/
+    padding:10px; /*create a space around elements content*/
+}
+.summary {
+    background-color: #aff2f5; /*set the background color*/
+    padding: 3px; /*set the padding*/
+}
+.legend-title {
+    padding: 0 10px; /*create a space around elements content*/
+    font-weight: bold; /*set the font to bold*/
+    font-size: 18px; /*set the font size*/
+}
+.required {
+    color: red; /*set the font color*/
+}
+.reset-button,.save-button,#confirm-button {
+    padding:5px; /*create a space around elements content*/
+    cursor: pointer; /*changes the cursor to a pointer when hovering over the button*/
+}
+.reset-button {
+    background-color: #ffd700; /*set the background color*/
+}
+.reset-button:hover {
+    background-color: #89cdf5; /*set the background color when the mouse over the button*/
+}
+.save-button {
+    background-color: #7ce78c; /*set the background color*/
+}
+.save-button:hover {
+    background-color: #a284ef; /*set the background color when the mouse over the button*/
+}
+#confirm-button {
+    background-color: #6bf276; /*set the background color*/
+}
+#confirm-button:hover {
+    background-color: #f2846b; /*set the background color when the mouse over the button*/
+}
+.button {
+    text-align: center; /*center the text */
+}

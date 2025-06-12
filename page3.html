@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+    <link rel="stylesheet" href="page3.css">
+    <link rel="stylesheet" href="template.css">
+</head>
+<body id="body-content3">
+<!--header-->
+    <header>
+        <div class="logo">
+            <img src="Images/LifeBelowWtaterlogo.png" alt="Life Below Water logo" >
+            <h1>Life Below Water</h1>   
+        </div>     
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>    
+            <ul class="nav-menu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    
+    
+    <!--content-->
+    <div class="topbackground">
+        <img src="Images/Pollutionbackground.jpg" alt="pollution background image">
+        <div class="toptext"> Marine Pollution </div>
+    </div>
+
+    <!--introduction-->
+    <div class="details1">
+        <h1>Introduction</h1>
+        <p>Marine pollution refers to the introduction of harmful substances or energy into the ocean, resulting in adverse effects on marine life, ecosystems, human health, and coastal activities. This pollution can come from a variety of sources and takes many forms.Such as chemical pollution, plastic pollution, nutrient pollution, oil spills, noice pollution ect.
+        </p><br>
+    </div>
+
+    <!--About chemical pollution-->
+    <div class="details2">
+        <h2>Chemical Pollution</h2>
+        <p>This involves the release of harmful chemicals into the ocean. Common pollutants include pesticides, herbicides, oil, industrial chemicals, and heavy metals. These substances can be toxic to marine organisms, disrupt ecosystems, and accumulate in the food chain, ultimately affecting human health.
+        </p>
+    </div>
+
+    <!--About Plastic pollution-->
+    <div class="details3">
+        <h2>Plastic Pollution</h2>
+        <p> Plastics, particularly microplastics, are a significant problem in marine environments. They are ingested by marine animals, causing injury or death, and can transport invasive species and pollutants across the ocean.
+        </p>
+    </div>
+
+    <!--About Nutrient pollution-->
+    <div class="details4">
+        <h2>Nutrient Pollution</h2>
+        <p> Excessive nutrients, such as nitrogen and phosphorus from agricultural runoff, sewage, and industrial waste, lead to algal blooms. When these algae die and decompose, they deplete oxygen in the water, creating dead zones where marine life cannot survive.
+        </p>
+    </div>
+
+    <!--Images of marine pollution-->
+    <div class="container">
+        
+        <div class="box">
+            <div class="imgBx">
+            <img src="Images/Chemicalpollution.webp" alt="Chemicalpollution">
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="imgBx">
+            <img src="Images/PlasticPllution.webp" alt="Plastic Pollution">
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="imgBx">
+            <img src="Images/Nutrient.webp" alt="Nutrient Pollution">
+            </div>
+            
+        </div>
+    </div>
+
+        
+
+    <script>
+        // Add event listener to nav toggle button
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>  <!--declare that this is an HTML 5 document-->
+<html lang="en">  <!--this is the root element of an html page-->
+    <head> <!--contains meta information of the html page-->
+        <meta charset="UTF-8"> <!--this make possible to use characters and emojis which not including in traditional ASCII character set-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--this tag is crucial for creating responsive web designs
+        which works on various devices.viewport is the user's visible area.
+        Width=device-width,sets the width of the page according to the width of the device. 
+        Initial-scale sets initial zoom level when the page is first loaded by the browser-->
+        <title>checkout</title> <!--title of the html page-->
+        <link rel="stylesheet" href="checkout.css"> <!--link to external style sheet for checkout section-->
+        <link rel="stylesheet" href="template.css"> <!--link to external style sheet for template-->
+    </head>
+    <body id="checkout-body"> <!--visible part of the html page-->
+        <header> <!--header of the web page-->
+            <div class="logo"> <!--logo of the website-->
+               <img src="logo.png" alt="Life-Below-Water-logo">
+               <h1>Life Below Water</h1>   
+            </div>     
+            <nav class="nav"> <!--navigation bar of the website-->
+                <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <ul class="nav-menu">
+                  <li><a href="home.html">Home</a></li> <!--link to home page-->
+                  <li><a href="gallery.html">Gallery</a></li> <!--link to gallery-->
+                  <li><a href="shop.html" class="active">Shop</a></li>  <!--link to shop-->
+                  <li><a href="profile.html">Profile</a></li>  <!--link to profile-->
+                  <li><a href="feedback.html">Feedback</a></li> <!--link to feedback-->
+                  <li><a href="sitemap.html">Sitemap</a></li>  <!--link to sitemap-->
+                  <li><a href="team.html">Team</a></li>  <!--link to team-->
+                </ul>
+            </nav>
+        </header>
+        <div id="heading-container"> <!--section for heading-->
+            <h2><b>Thank you for choosing us</b></h2>
+            <h4>Fill in the details below to complete your purchase</h4>
+        </div>
+        <!--form element. Give id for efficiently use with javaScript functionalities-->
+        <form id="checkout-form" action="mailto:formssdg@gmail.com" method="post" enctype="text/plain"> <!--when a user submit the form it is posted to this email address-->
+            <div id="main-container"> <!--main container for the details-->
+                <div id="details1"> <!--container for the payment details-->
+                    <fieldset id="fd1"> <!--feildset for payment details-->
+                        <legend class="legend-title">Payment Details</legend>
+                        <small><span class="required">*</span>indicate required information</small>
+                        <br>
+                        <b>Payment Information:</b><br><br>
+                        <label for="cardnum">Card Number</label><span class="required">*</span><br>
+                        <input type="text" id="cardnum" name="Card Number" maxlength="16" required>
+                        <br>
+                        <label for="choldname">Cardholder Name</label><span class="required">*</span><br>
+                        <input type="text" id="choldname" name="Cardholder Name" required>
+                        <br>
+                        <label for="expdate">Expiry Date</label><span class="required">*</span><br>
+                        <input type="text" id="expdate" name="Expire date" placeholder="MM/YY" required>
+                        <br>
+                        <label for="ccv">CCV</label><span class="required">*</span><br>
+                        <input type="text" id="ccv" name="CCV" maxlength="3" required>
+                        <br>
+                        <br>
+                        <div class="button">
+                            <button type="button" onclick="clearFieldset('fd1')" class="reset-button">Clear Fields</button>&nbsp;
+                            <button type="button" onclick="saveFieldset('fd1')" class="save-button">Save Changes</button><br><br>
+                        </div>
+                    </fieldset>
+                </div>    
+                <div id="details2">  <!--container for the billing address-->
+                    <fieldset id="fd2"> <!--feildset for billing address-->
+                        <legend class="legend-title">Billing Address</legend>
+                        <small><span class="required">*</span>indicate required information</small>
+                        <br>
+                        <b>Address:</b><br><br>
+                        <label for="add1">Address Line 1</label><span class="required">*</span><br>
+                        <input type="text" id="add1" name="Address" required>
+                        <br>
+                        <label for="add2">Address Line 2</label><br>
+                        <input type="text" id="add2" name="Address">
+                        <br>
+                        <label for="add3">Address Line 3</label><br>
+                        <input type="text" id="add3" name="Address">
+                        <br>
+                        <label for="city">Town/City</label><span class="required">*</span><br>
+                        <input type="text" id="city" name="City" required>
+                        <br>
+                        <label for="postcode">Postcode/Zip code</label><span class="required">*</span><br>
+                        <input type="text" id="postcode" name="Postcode" minlength="5" maxlength="10"  required>
+                        <br>
+                        <label for="country">Country</label><span class="required">*</span><br>
+                        <input type="text" id="country" name="Country" required>
+                        <br>
+                        <br>
+                        <div class="button">
+                            <button type="button" onclick="clearFieldset('fd2')" class="reset-button">Clear Fields</button>&nbsp;
+                            <button type="button" onclick="saveFieldset('fd2')" class="save-button">Save Changes</button><br><br>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="details3"> <!--container for the contact details-->  
+                    <fieldset id="fd3"> <!--feildset for contact details-->
+                        <legend class="legend-title">Contact Details</legend>
+                        <small><span class="required">*</span>indicate required information</small><br>
+                        <label for="fname">First Name</label><span class="required">*</span><br>
+                        <input type="text" id="fname" name="first name" required>
+                        <br>
+                        <label for="sname">Surname</label><span class="required">*</span><br>
+                        <input type="text" id="sname" name="surname" required>
+                        <br>
+                        <label for="email">Email Address</label><span class="required">*</span><br>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <br>
+                        <div class="button">
+                            <button type="button" onclick="clearFieldset('fd3')" class="reset-button">Clear Fields</button>&nbsp;
+                            <button type="button" onclick="saveFieldset('fd3')" class="save-button">Save Changes</button><br><br>
+                        </div>    
+                    </fieldset>
+                </div> 
+            </div>        
+            <div id="order-details">  <!--container for order details-->
+                <fieldset id="fd4">   <!--fieldset for order details-->
+                    <legend class="legend-title">Order Summary</legend>
+                    <h4 class="summary">Reference:</h4>
+                    <h4 class="summary">Order Items</h4>
+                    <hr>
+                    <p class="ordersummary">Item Name :</p>
+                    <p class="ordersummary">Item Price :</p>
+                    <p class="ordersummary">Quantity :</p>
+                    <hr>
+                    <h4 class="summary">Order Total :</h4>
+                    <div class="button">
+                        <input type="reset" name="resetform" value="Reset Form" class="reset-button">&nbsp;
+                        <input type="submit" name="Confirmorder" value="Confirm Order" id="confirm-button"><br><br>
+                    </div>
+                </fieldset>
+            </div>             
+        </form>
+        <!--paragraph element to display feedback message to the user-->
+        <p id="feedback"></p>
+        <!--link to external JavaScript file for form functionality-->
+        <script src="shop.js"></script>
+        <footer> <!--footer of the webpage-->
+            <a href="shop.html">Back to shop</a>
+            <p>&copy; 2024 SDG Website. All rights reserved.</p>
+            <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p> <!--links to editor pages-->
+        </footer>
+    </body>
+</html>

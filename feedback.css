@@ -1,0 +1,166 @@
+/* Container styling */
+.form-container {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+/* Form control styling */
+.form-control {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+  
+.form-control:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+  
+/* Label styling */  
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+  
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+/* Button styling */
+button[type="submit"] {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+button[type="submit"] {
+  background-color: green;
+  color: white;
+}  
+  
+button[type="submit"]:hover {
+    background-color: #2ecc71;
+}
+
+button#preview-btn, button#edit-btn {
+  background-color: brown;
+  color: white;
+}
+
+button#preview-btn:hover, button#edit-btn:hover {
+  background-color: #a0522d;
+}
+
+/* Preview container styling */
+#preview-container {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Radio group styling */
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+  
+.radio-group label {
+    margin-right: 20px;
+}
+
+.radio-group, .rating-group, .recommend-group {
+  margin-bottom: 20px;
+}
+
+.radio-group label, .rating-group label, .recommend-group label {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Rating group styling */
+.rating-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.rating-group label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Recommend group styling */
+.recommend-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recommend-group input[type="radio"] {
+    margin-right: 5px;
+}
+  
+.recommend-group label {
+    margin-right: 10px;
+}
+
+/* Confirmation message styling */
+.confirmation {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .form-container {
+      width: 80%;
+  }
+
+  .form-control {
+      width: 100%;
+  }
+
+  button[type="button"], button[type="submit"] {
+      width: 100%;
+      margin: 10px 0;
+  }
+}

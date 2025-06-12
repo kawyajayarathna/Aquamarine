@@ -1,0 +1,53 @@
+#page2-body {
+    font-family:'Times New Roman', Times, serif; /*specify the font type of the text*/
+    background-color: rgb(170, 220, 242); /*set the background color*/
+    margin:0; /*remove default margin*/
+}  
+.cont h1 {
+    font-weight: bold; /*set font to bold*/
+    font-size: 40px; /*set the font size*/
+    text-align: center; /*center the text inside the section*/
+}
+.cont p {
+    font-size: 18px; /*set the font size*/
+    margin-left: 150px; /*add a space to the left of the element*/
+    margin-right: 150px; /*add a space to the right of the element*/
+    line-height: 1.5; /*keep a space between lines for user readability*/
+}
+.marine-title {
+    background-image: url('pageimg5.png');
+    background-size: cover; /*container covered by the background image*/
+    color:white; /*set text color*/
+}
+#content2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+#subcontent2 {
+    float: right; /*move to right side*/
+    margin-right: 50px; /*keep margin from right side*/
+}
+#content2 #subcontent2 {
+    background: rgb(0, 0, 0); /*black color*/
+    background: rgba(0,0,0,0.6); /*black background with opacity*/
+    line-height: 1.2; /*keep a space between lines for user readability*/
+}
+.marineArcheo {
+    width: 300px; /*set the image width*/
+    height:auto; /*set the image height*/
+    margin: 10px; /*sets margin on all sides of the element*/
+    display: inline; /*display inline*/
+    flex-wrap: wrap; /*allow child elements to wrap */
+  
+}
+
+@media (max-width: 768px) {
+    #content2 {
+        flex-direction: column;
+        align-items:center;
+    }
+    .marineArcheo,#subcontent2 {
+        max-width: 100%;
+    }
+}
+  

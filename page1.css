@@ -1,0 +1,74 @@
+/* Main Styles */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+  
+  .content {
+    background-color:#ADD8E6;
+    background-position: center;
+    padding: 55px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .topic-sentence{
+    color:black;
+    font-size: 75px;
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+  }
+  
+  .background-container {
+    width: 100%;
+    height: 175px;
+    background-size: cover;
+    font-size: 17px;
+    text-align: justify;
+    background-color:azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .upper {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("marine-life-background.jpeg");
+    background-size:cover;
+    width: 100%;
+    height: 300px;
+    opacity: 0.8;
+    margin-top: -100px; 
+  }
+
+  
+  
+  .image1{
+    width: 40%;
+    height: 30%;
+    float:right;
+    transition: transform 0.3s ease-in-out; /* add transition for smooth effect */
+  }
+  .image1:hover {
+    transform: scale(1.05); /* zoom in by 10% */
+  }
+
+ 
+  .image2{
+    width: 40%;
+    height: 30%;
+    float:left; 
+    margin-right: 20px; 
+    padding-right: 200px;
+    transition: transform 0.3s ease-in-out; /* add transition for smooth effect */
+  }
+  .image2:hover {
+    transform: scale(1.05); /* zoom in by 10% */
+  }
+
+  
+
+  hr {
+    border: none;
+    border-top: 1px solid Black;
+    margin: 40px 0;
+  }

@@ -1,0 +1,49 @@
+html {
+      scroll-behavior: smooth;  /*set the scrolling style*/
+}
+
+body {
+      font-family: 'Courier New', Courier, monospace;  /*specify the font type of the text*/
+      margin: 0;
+      background-color: rgb(123, 168, 176); /*set the background color*/ 
+}
+
+h1{
+    text-align: center; /*aligning the text*/
+    color: black;  /*set the font color*/
+}
+
+h2 {
+      text-align: center; /*aligning the text*/
+      color: black;  /*set the font color*/
+      font-size: 30px;   /*set the font size*/
+      padding: 8px; 
+}
+
+.Header {
+      background-color:rgb(252, 252, 252); /*set the background color*/ 
+      text-align: center; /*aligning the text*/
+      padding: 30px;
+}
+
+.Content {
+      text-align: center; /*aligning the text*/
+      margin-top: 20px;
+      color: white; /*set the font color*/
+}
+
+
+p {
+      font-size: 20px;
+      color: black; /*set the font color*/
+}
+
+.Content a {
+      text-align: center;
+      color:black;
+      text-decoration: none;
+}
+
+a:hover {
+      color: white;
+}

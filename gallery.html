@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive 3D Carousel</title>
+     <link rel="stylesheet" href="template.css">
+  <style>
+    main {
+  padding-top: 160px; /* Adjust this to match actual header height */
+}
+
+
+    body {
+      margin: 0;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+     .carousel-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* adjust based on your header height */
+  }
+
+   .carousel {
+    margin-top: 20px;
+    position: relative;
+    width: 200px;
+    height: 260px;
+    perspective: 800px;
+  }
+
+    
+.carousel-track {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate 30s infinite linear;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* This script dynamically places each slide correctly */
+/* Ensure carousel doesn't overlap with nav toggle or header */
+.carousel-container {
+  padding-top: 40px; /* Extra top space to account for nav toggle in mobile */
+  z-index: 1;
+  position: relative;
+}
+
+/* Prevent carousel from hiding behind fixed headers */
+.carousel {
+  z-index: 1;
+  position: relative;
+}
+
+/* Improve spacing and centering in smaller screens */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding-top: 80px; /* Push carousel further down below hamburger nav */
+  }
+
+  .carousel {
+    width: 140px;
+    height: 180px;
+  }
+
+  .slide img {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 120px;
+    height: 160px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+  }
+
+  .close-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  header .logo h1 {
+    font-size: 18px;
+  }
+
+  .nav-menu {
+    font-size: 14px;
+  }
+}
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .modal{
+  display: flex;
+  animation: zoomIn 0.6s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+    .slide img {
+      width: 95%;
+      height: 95%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(-360deg);
+      }
+    }
+
+   .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 10px;
+  width: 95vw;
+  height: 80vh;
+  max-width: 1200px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: row; /* changed from column to row */
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 20px; /* space between image and text */
+}
+
+.modal-content img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-description {
+  width: 40%;
+  font-size: 16px;
+  color: #333;
+  overflow-y: auto;
+  max-height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.close-button {
+  margin-top: 15px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #c0392b;
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+.modal.closing {
+  animation: zoomOut 0.6s ease forwards;
+}
+
+
+    .main {
+        padding-top: 20px;
+    }
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    padding: 15px;
+    max-height: 90vh;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+  }
+
+  .modal-description {
+    max-width: 100%;
+    font-size: 14px;
+    max-height: 40vh;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+
+  .close-button {
+    align-self: center;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.carousel-track .slide {
+  transform-origin: center center;
+}
+
+
+  </style>
+</head>
+<body>
+
+     <header> <!--header of the web page-->
+            <div class="logo"> <!--logo of the website-->
+               <img src="logo.png" alt="Life-Below-Water-logo">
+               <h1>Life Below Water</h1>   
+            </div>     
+            <nav class="nav"> <!--navigation bar of the website-->
+                <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <ul class="nav-menu">
+                  <li><a href="home.html">Home</a></li> <!--link to home page-->
+                  <li><a href="gallery.html" class="active">Gallery</a></li> <!--link to gallery-->
+                  <li><a href="shop.html">Shop</a></li>  <!--link to shop-->
+                  <li><a href="profile.html">Profile</a></li>  <!--link to profile-->
+                  <li><a href="feedback.html">Feedback</a></li> <!--link to feedback-->
+                  <li><a href="sitemap.html">Sitemap</a></li>  <!--link to sitemap-->
+                  <li><a href="team.html">Team</a></li>  <!--link to team-->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="slide" data-img="Images/image1.jpg" data-desc="The Blue Ringed Octopus is a small, venomous cephalopod found in tide pools and coral reefs in the Pacific and Indian Oceans. Despite its size, it is highly venomous, capable of killing humans in minutes. There is no antidote. It is about 5 to 8 inches long and lives in the intertidal zone. It is bright blue, with 10 to 20 bright blue rings on its body. When it is aggravated or touched, it lights up. The prey catches small shrimp and crabs, which are too slow for the blue-ringed octopus. The octopus injects them with poison, which turns the victims into a mushy mass of food. This is a tiny, venomous head, venomous, and dangerous to small crabs."><img src="Images/image1.jpg" alt=""></div>
+
+      <div class="slide" data-img="Images/Jelly Fish.jpg" data-desc="Jellyfish are free-swimming marine animals consisting of a gelatinous umbrella-shaped bell and trailing tentacles. The bell can pulsate to provide propulsion and highly efficient locomotion. Jellyfish are found in every ocean, from the surface to the deep sea. Scyphozoans are the most common and recognizable jellyfish, typically found in coastal waters worldwide."><img src="Images/Jelly Fish.jpg" alt=""></div>
+
+      <div class="slide" data-img="Images/coral reef.jpg" data-desc="Coral reefs are diverse underwater ecosystems held together by calcium carbonate structures secreted by corals. These structures are primarily built by coral polyps, tiny animals that live in colonies. Coral reefs are important for biodiversity, providing habitat for numerous marine organisms. They are found in warm, shallow waters and are often referred to as the rainforests of the sea."><img src="Images/coral reef.jpg" alt=""></div>
+
+      <div class="slide" data-img="Images/Delfini.jpeg" data-desc="Dolphins are highly intelligent marine mammals known for their playful behavior. They are found in various aquatic environments including oceans, coastal areas, and rivers. Dolphins are carnivores, mostly eating fish and squid. They are part of the family of whales that includes orcas and pilot whales."><img src="Images/Delfini.jpeg" alt=""></div>
+
+      <div class="slide" data-img="Images/Kelp forest.jpg" data-desc="Kelp forests are underwater areas with a high density of kelp, which are large brown algae. They are recognized as one of the most productive and dynamic ecosystems on Earth. Kelp forests are found in shallow, nutrient-rich waters in temperate and polar coastal oceans. They provide habitat and food for a wide range of marine organisms."><img src="Images/Kelp forest.jpg" alt=""></div>
+
+      <div class="slide" data-img="Images/Starfish.jpeg" data-desc="Starfish, or sea stars, are star-shaped echinoderms belonging to the class Asteroidea. They typically have a central disc and five arms, though some species have more. Starfish are found in all of the world's oceans, including the Atlantic, Pacific, Indian, Arctic, and Southern Ocean. They are known for their ability to regenerate lost arms, and in some cases, their entire body."><img src="Images/Starfish.jpeg" alt=""></div>
+
+      <div class="slide" data-img="Images/Plastic Polution2.jpg" data-desc="Plastic pollution is the accumulation of plastic products in the environment that adversely affects wildlife, wildlife habitat, and humans.
+                It is caused by inadequate waste disposal and recycling, as well as plastic products that are designed to be disposable.
+                Plastic pollution is widespread in oceans, rivers, and terrestrial environments, where it poses a threat to marine life, birds, and other animals.
+                Plastic debris can entangle marine animals, such as turtles and seals, and be mistaken for food by fish and seabirds.
+                It can also leach harmful chemicals into the environment and contribute to global warming."><img src="Images/Plastic Polution2.jpg" alt=""></div>
+
+      <div class="slide" data-img="Images/sea turtle is lovely.jpeg"data-desc="Sea turtles are reptiles of the order Testudines and of the suborder Cryptodira. They can be found in all oceans except for the polar regions. The seven existing species of sea turtles are: the green sea turtle, the loggerhead, the Kemp's ridley, the olive ridley, the hawksbill, the flatback, and the leatherback."><img src="Images/sea turtle is lovely.jpeg" alt=""></div>
+
+      <div class="slide" data-img="Images/Pollutionbackground.jpg" data-desc="Overfishing is the depletion of fish stocks in the world's oceans due to excessive fishing. It is a serious environmental issue that threatens marine ecosystems and food security.
+                Overfishing occurs when fish are caught faster than they can reproduce, leading to population declines and even species extinction.
+                It is driven by industrial fishing practices, such as trawling and longlining, as well as illegal and unregulated fishing.
+                Overfishing can have cascading effects on marine food webs, affecting predators, prey, and other species.
+                Sustainable fishing practices, such as catch limits and marine protected areas, are essential for reducing overfishing and protecting marine biodiversity."><img src="Images/Pollutionbackground.jpg" alt=""></div>
+      <div class="slide" data-img="Images/OceanCleanup.jpg" data-desc="The Ocean Cleanup is a nonprofit organization developing advanced technologies to rid the world's oceans of plastic pollution.
+                It was founded in 2013 by Boyan Slat, who was inspired to take action after diving in Greece and finding more plastic bags than fish.
+                The organization's mission is to clean up 90% of ocean plastic pollution by 2040. It is developing passive cleanup systems that use ocean currents to concentrate and capture plastic debris.
+                The Ocean Cleanup has conducted successful pilot tests and is now scaling up its operations to deploy larger cleanup systems in the Great Pacific Garbage Patch and other ocean gyres."><img src="Images/OceanCleanup.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Large Image" />
+      <div class="modal-description"><p id="modalDesc"></p></div>
+      <button class="close-button" id="closeModal">Close</button>
+    </div>
+  </div>
+</main>
+ <script>
+  const slides = document.querySelectorAll('.slide');
+  const track = document.getElementById('carouselTrack');
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalDesc = document.getElementById('modalDesc');
+  const closeModal = document.getElementById('closeModal');
+
+  const total = slides.length;
+  const angle = 360 / total;
+
+  // Position slides in a circle
+  slides.forEach((slide, index) => {
+    slide.style.transform = `rotateY(${index * angle}deg) translateZ(300px)`;
+  });
+
+  // Show modal on image click
+  slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+      const imgSrc = slide.getAttribute('data-img');
+      const desc = slide.getAttribute('data-desc');
+
+      modalImage.src = imgSrc;
+      modalDesc.textContent = desc;
+      modal.style.display = 'flex';
+    });
+  });
+
+  // Close modal
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImage.src = '';
+    modalDesc.textContent = '';
+  });
+
+  // Optional: Close modal when clicking outside the content
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImage.src = '';
+      modalDesc.textContent = '';
+    }
+  });
+
+  // Mobile nav toggle
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    document.querySelector('.nav-menu').classList.toggle('show');
+  });
+ 
+
+
+  
+</script>
+   
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+
+</body>
+</html>

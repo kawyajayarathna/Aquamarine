@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing team members</title>
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="template.css">
+</head>
+<body id="body-team">
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img src="Images/LifeBelowWtaterlogo.png" alt="Life Below Water logo" >
+            <h1>Life Below Water</h1>   
+        </div>     
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>    
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Details about eam members-->
+    <div class="heading">
+        <h1>Team Members</h1>
+        <h6>Hover over the image for student details</h6>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="Images/Minothma.jpeg" alt="Minothma">
+            <div class="info">
+                <h3 class="title">Minothma Dayananda</h3>
+                <span class="post">Student 1</span>
+                <div class="studentNo">w2084745</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Images/Wiruni.jpeg" alt="Wiruni">
+            <div class="info">
+                <h3 class="title">Wiruni Withana</h3>
+                <span class="post">Student 2</span>
+                <div class="studentNo">w2083583</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Images/Dinaya.jpeg" alt="Dinaya">
+            <div class="info">
+                <h3 class="title">Dinaya Guruge</h3>
+                <span class="post">Student 3</span>
+                <div class="studentNo">w2089053</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Images/Sharadee.JPG" alt="Sharadee">
+            <div class="info">
+                <h3 class="title">Sharadee Jayarathna</h3>
+                <span class="post">Student 4</span>
+                <div class="studentNo">w2082844</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Add event listener to nav toggle button
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    </script>
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>  
+</body>
+</html>

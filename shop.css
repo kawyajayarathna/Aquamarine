@@ -1,0 +1,94 @@
+#shop-body {
+    font-family:'Times New Roman', Times, serif; /*specify the font type of the text*/
+    background-color: rgb(170, 220, 242); /*set the background color*/
+    margin:0; /*remove default margin*/
+}
+.product-showcase {
+    display:flex; /*use flexbox to arrange child elements*/
+    flex-wrap: wrap; /*allow child elements to wrap */
+    justify-content: center; /*horizontally center the items*/
+    padding:10px; /*create a space around element's content*/
+    padding-right: 500px; /*set the padding of right side of the element's content*/
+}
+.product-card,.basket {
+    background-color: rgb(222, 230, 237); /*set the background color*/
+    border:2px solid rgb(71, 69, 69); /*border shortcut-width ,style and color*/
+    border-radius: 12px; /*radius of the corner of the border*/
+    margin:10px; /*sets margin on all sides of the element*/
+    margin-bottom: 10px; /*adds space to the bottom of the element*/
+    text-align: center; /*center the text inside the product card and basket*/
+}
+.product-card {
+    width:200px; /*set the product card width*/
+    padding:10px; /*create a space around elements content*/
+}
+.product-image {
+    width:100%; /*set the image width*/
+    height: 200px; /*set the image height*/
+}
+.imgname {
+    font-size: 18px; /*set the font size*/
+    margin: 5px; /*sets margin on all sides of the element*/
+}
+.imgdescribe {
+    font-size:16px; /*set the font size*/
+    margin:4px; /*sets margin on all sides of the element*/
+}
+.price {
+    margin:5px; /*sets margin on all sides of the element*/
+}
+.add-button {
+    background-color: rgb(234, 207, 119); /*set the background color of the add to basket button*/
+    text-align: center; /*center the text */
+    margin-top: 10px; /*adds margin to the top of the button*/
+    padding: 5px; /*create a space around elements content*/
+    cursor: pointer; /*changes the cursor to a pointer when hovering over the button*/
+}
+.add-button:hover {
+    background-color: rgb(79, 221, 228); /*set the background color when the mouse over the button*/
+}
+.basket {
+    height:780px; /*set the height*/
+    position:absolute; /*position relative to the nearest positioned ancestor*/
+    top:20px; /*sets the element 20px from the top of its container*/
+    right:50px; /*sets the element 50px from the right edge of its container*/
+    width:350px; /*set the basket width */
+    padding:30px; /*create a space around elements content*/
+    margin-top: 150px; /*adds margin to the bottom of the element*/
+}
+.basket-items-wrapper{
+    max-height: 200px;
+    overflow-y: auto; /*enable vertical scrolling*/
+    border:2px solid rgb(120, 113, 113); /*border shortcut-width ,style and color*/
+}
+#basket-items {
+    list-style-type: none; /*set the list style type to none*/
+    padding:0; /*remove default padding*/
+    margin: 0; /*remove default margin*/
+}
+#basket-items li {
+    margin-bottom: 5px; /*add a space to the bottom of the element*/
+}
+#total,#amount {
+    font-weight: bold; /*set the font to bold*/
+    text-align: right; /*set the text inside an element to right side*/
+    padding-right: 5px; /*set the padding of right side of the element's content*/
+}
+.persn {
+    text-align: left; /*set the text inside an element to left side*/
+    padding:10px; /*create a space around elements content*/
+}
+#chck {
+    margin-top: 20px; /*adds margin to the top of the element*/
+    padding:10px; /*create a space around elements content*/
+}
+#checkout-button {
+    background-color: rgb(108, 241, 115); /*set the background color*/
+    padding:10px; /*create a space around elements content*/
+    margin-top: 80px; /*adds margin to the top of the element*/
+    font-weight: bold; /*set the font to bold*/
+    cursor: pointer; /*changes the cursor to a pointer when hovering over the button*/
+}
+#checkout-button:hover {
+    background-color: rgb(99, 172, 227); /*set the background color when the mouse over the button*/
+}

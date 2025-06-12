@@ -1,0 +1,64 @@
+body {
+    background-size:cover;
+    font-family: Arial, sans-serif;
+    margin: 0%;
+    padding: 0;
+}
+
+#body-userprofile{
+    background-color: lightblue; /*Background colour for the webpage*/
+
+}
+
+#profile-container { /*styles for profile details container*/
+    color: #b5ddc5;
+    width: 40%; /* Reduced to half */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #008267; /*Background colour for the profile container*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#profile-output {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#progress-container {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#prompts-container {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding to make it larger */
+    width: 100%;
+}
+
+progress {
+    width: 100%;
+    height: 20px; /* Adjusted height to make it slightly higher */
+    border-radius: 10px;
+}
+
+/* Style for buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0; /* Increased margin for more space */
+    border: none;
+    border-radius: 50%; /* Made button boxes round */
+    background-color: #008267;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00a090;
+}

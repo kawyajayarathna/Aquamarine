@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Sustainable Development Goal 14: Life Below Water">
+    <meta name="keywords" content="SDG 14, Life Below Water, Sustainable Development">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="feedback.css">
+    <link rel="stylesheet" type="text/css" href="template.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Life Below Water logo" >
+            <h1>Life Below Water</h1>   
+        </div>     
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>    
+            <ul class="nav-menu">
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <form id="feedback-form" action="javascript:void(0);" method="POST" >
+            
+            <!-- Input fields -->
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" class="form-control" required aria-required="true" title="Enter your full name" placeholder="Enter name here" >
+        
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" class="form-control" required aria-required="true"  title="Please enter a valid email address" placeholder="Enter email here">
+            <div id="email-error" class="error"></div>
+
+            <label for="category">Select a category:</label>
+            <select id="category" name="category" class="form-control" required aria-required="true" title="Select a category">
+                <option value="">Select a category</option>
+                <option value="general">General Feedback</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+            </select>
+
+            <!-- Radio buttons -->
+            <label>Was this your first time visiting?</label>
+            <div class="radio-group">
+                <input type="radio" id="first-time-yes" name="first-time" value="yes">
+                <label for="first-time-yes">YES</label>
+                <input type="radio" id="first-time-no" name="first-time" value="no">
+                <label for="first-time-no">NO</label>
+            </div>    
+
+            <label>Was this website informative and easy to navigate through?</label>
+            <div class="radio-group">
+                <input type="radio" id="informative-yes" name="informative" value="yes">
+                <label for="informative-yes">YES</label>
+                <input type="radio" id="informative-no" name="informative" value="no">
+                <label for="informative-no">NO</label>
+            </div>
+
+            <!-- Textarea for suggestions -->
+            <label>If "NO", suggest any improvements for the future:</label>
+            <textarea id="improvements" name="improvements" class="form-control" title="Enter your suggestions for improvement"  placeholder="Add your message here"></textarea>
+        
+            <!-- Rating scale -->
+            <label>How satisfied are you with Our services?Choose from 1 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</label>
+            <div class="rating-group" >
+                <label><input type="radio" name="satisfaction" value="1">1</label>
+                <label><input type="radio" name="satisfaction" value="2">2</label>
+                <label><input type="radio" name="satisfaction" value="3">3</label>
+                <label><input type="radio" name="satisfaction" value="4">4</label>
+                <label><input type="radio" name="satisfaction" value="5">5</label>
+                <label><input type="radio" name="satisfaction" value="6">6</label>
+                <label><input type="radio" name="satisfaction" value="7">7</label>
+                <label><input type="radio" name="satisfaction" value="8">8</label>
+                <label><input type="radio" name="satisfaction" value="9">9</label>
+                <label><input type="radio" name="satisfaction" value="10">10</label>
+            </div>
+
+            <!--recommend-group-->
+            <label>Would you recommend our services?</label>
+            <div class="recommend-group">
+                <input type="radio" id="recommend-yes" name="recommend" value="yes">
+                <label for="recommend-yes">YES</label>
+                <input type="radio" id="recommend-no" name="recommend" value="no">
+                <label for="recommend-no">NO</label>
+            </div>
+        
+            <!-- Dropdown for updates -->
+            <label>Would you like to receive updates about the website and any offers?</label>
+            <select id="updates" class="form-control" required aria-required="true" title="Select an option for updates">
+                <option value="">Select an option</option>
+                <option value="email">Yes, via Email</option>
+                <option value="other">No</option>
+            </select> 
+        
+            <!-- Textarea for additional questions or requests -->
+            <label>Do you have any additional questions or requests?</label>
+            <textarea id="questions" class="form-control" required placeholder="Add your message here" ></textarea>
+        
+            <!-- Preview, Edit, Submit buttons -->
+            <button type="button" id="preview-btn" style="background-color:brown; color: white;">Preview</button>
+            <button type="button" id="edit-btn" style="background-color:brown; color: white;">Edit</button>
+            <button type="submit" id="submit-btn" style="background-color: green; color: white;">Submit</button>
+        </form>
+        <div id="preview-container"></div>
+        <div id="confirmationMsg"></div>
+        <div id="successMessage" style="display: none; color: green;">Submitted successfully! Thank you for your feedback.</div>
+       
+    </div>
+
+    <script src="feedback.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Add event listener to nav toggle button
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p> Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+
+
+</body>
+</html>

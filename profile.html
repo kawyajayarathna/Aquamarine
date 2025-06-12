@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="template.css">
+    
+</head>
+<body id="body-userprofile">
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img src="Images/LifeBelowWtaterlogo.png" alt="Life Below Water logo" >
+            <h1>Life Below Water</h1>   
+        </div>     
+        <nav class="nav">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>    
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--User profile content-->
+    <div id="profile-container">
+        <h1>User Profile</h1>
+        <div id="profile-output"></div>
+        <div id="progress-container">
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <p id="progress-text">0% Complete</p>
+        </div>
+        <div id="prompts-container">
+            <!-- Questions and inputs will be dynamically generated here -->
+        </div>
+    </div>
+    
+    <script>
+        // Add event listener to nav toggle button
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    </script>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2024 SDG Website. All rights reserved.</p>
+        <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>

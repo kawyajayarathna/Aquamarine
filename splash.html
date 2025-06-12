@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!--declare that this is an HTML 5 document-->
+<html lang="en"> <!--this is the root element of an html page-->
+    <head> <!--contains meta information of the html page-->
+        <meta http-equiv="refresh" content="4; url=home.html"> <!--automatic redirection to the home page-->
+        <meta charset="UTF-8"> <!--this make possible to use characters and emojis which not including in traditional ASCII character set-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--this tag is crucial for creating responsive web designs
+        which works on various devices.viewport is the user's visible area.
+        Width=device-width,sets the width of the page according to the width of the device. 
+        Initial-scale sets initial zoom level when the page is first loaded by the browser-->
+        <title>Splash Screen</title> <!--title of the html page-->
+        <link rel="stylesheet" href="splash.css"> <!--link to external css file-->
+    </head>
+    <body id="splash-body"> <!--visible part of the html document-->
+        <!--splash screen code starts here-->
+        <div  id="splash"> <!--container for the splash screen-->
+            <div class="splash-content"> <!--container for the content of the splash screen-->
+               <img src="logo.png" alt="our-logo" id="logo"> <!--logo image of the website-->
+               <h1 id="web-title"><b>Goal 14: Life Below Water</b></h1> <!--website title-->
+               <p id="web-mission"><i>Our mission is to promote the conservation and sustainable use of the oceans,<br>
+                seas and marine resources,in line with the UN Sustainable Development Goal 14.</i></p> <!--website mission-->
+               <h4 id="memtitle">Group Members</h4> <!--members of the group-->
+               <ul id="memberlist">
+                  <li>Senuvi Dayananda</li>
+                  <li>Wiruni Withana</li>
+                  <li>Dinaya Guruge</li>
+                  <li>Sharadee Jayarathne</li>
+                </ul>
+                <div class="loader-container">
+                  <!--set an animated image to indicate that home page is loading-->
+                  <img src="dolphin.gif" alt="Loading..." id="load-image">
+                  <div class="loader"></div> 
+                  <span style="font-size: 18px;">Loading...</span><!--indicate that the home page is loading-->
+               </div>
+            </div>
+        </div><!--splash screen code ends here-->
+    </body>
+</html>

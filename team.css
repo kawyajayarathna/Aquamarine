@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"popins";
+    transition: all .2s linear;
+}
+
+#body-team{
+    background-size: cover;
+    background-color: darkslategray; /*style for background colour*/
+}
+
+.heading {  /*styles for team member heading*/
+    color: lightblue;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.heading h1{
+    margin-top: 20px;
+}
+
+.heading h6{
+    margin-top: 20px;
+    color: beige;
+    font-size: 20px;
+}
+
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+}
+
+.box-container .box{
+    height: 400px;
+    width: 280px;
+    
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.532);
+    overflow: hidden;
+    margin: 20px 15px;
+}
+
+.box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.box-container .box:hover img{     /*Hover selector for images*/
+    filter:brightness(50%);
+}
+
+.box-container .box .info{
+    text-align: center;
+    color: white;
+    background:linear-gradient(to top, #000000, transparent);
+    position:relative;
+    bottom: 10px;
+}
+
+.box-container .box:hover .info{    /*Hover selector for details*/
+    bottom: 94px;
+}
+
+.box-container .box .info .title{
+    padding: 5px 0;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.box-container .box .info .post{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box-container .box .info .studentNo{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+  
+  
+  
+  

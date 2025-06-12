@@ -1,0 +1,202 @@
+ /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80') center/cover no-repeat fixed;
+            background-color: #f0f8ff; /* Fallback color */
+        }
+        /* Main content styles */
+        main {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* Sitemap specific styles */
+        .sitemap-container {
+            text-align: center;
+            margin: 20px 0;
+            z-index: 0;
+            position: relative;
+        }
+        .nav-menu {
+    z-index: 10;
+    position: relative;
+}
+
+        .sitemap-title {
+            color: #0077be;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .sitemap-svg {
+            width: 100%;
+            height: 600px;
+            background: rgba(227, 242, 253, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 0 auto;
+            display: block;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Neumorphic node styles */
+        .neuro-node {
+            transition: all 0.2s ease;
+            cursor: pointer;
+            filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3)) drop-shadow(-2px -2px 4px rgba(255,255,255,0.8));
+        }
+
+        .neuro-node:hover {
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4)) drop-shadow(-1px -1px 2px rgba(255,255,255,0.6));
+            transform: translateY(2px);
+        }
+
+        .neuro-node:active {
+            transform: translateY(3px);
+            filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
+        }
+
+        .main-node {
+            fill: #e3f2fd;
+            stroke: none;
+            box-shadow: 
+                8px 8px 16px rgba(0,119,190,0.2),
+                -8px -8px 16px rgba(255,255,255,0.8);
+        }
+
+        .primary-node {
+            fill: #bbdefb;
+            stroke: none;
+        }
+
+        .secondary-node {
+            fill: #90caf9;
+            stroke: none;
+        }
+
+        .node-text {
+            pointer-events: none;
+            user-select: none;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .connection-line {
+            stroke: #0077be;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawLine 2s ease-in-out forwards;
+            opacity: 0.7;
+        }
+
+        .connection-line-thin {
+            stroke: #40a9ff;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: drawLine 1.5s ease-in-out forwards;
+            opacity: 0.6;
+        }
+
+        @keyframes drawLine {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .neuro-node {
+            opacity: 0;
+            animation: fadeInNode 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInNode {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .sitemap-svg {
+                height: 650px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-toggle span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #333;
+                margin-bottom: 5px;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border: none;
+            }
+
+            .nav-menu.show {
+                display: block;
+            }
+
+            .nav {
+                background-color: transparent;
+            }
+
+            .sitemap-title {
+                font-size: 2em;
+            }
+
+            .sitemap-svg {
+                height: 700px;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sitemap-svg {
+                height: 800px;
+            }
+            
+            .sitemap-title {
+                font-size: 1.8em;
+            }
+        }
+        
+        /* Neumorphic effects */
+        .neuro-shadow {
+            filter: drop-shadow(8px 8px 16px rgba(0,119,190,0.15)) 
+                    drop-shadow(-4px -4px 8px rgba(255,255,255,0.7));
+        }

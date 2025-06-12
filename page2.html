@@ -1,0 +1,94 @@
+<!DOCTYPE html>  <!--declare that this is an HTML 5 document-->
+<html lang="en">  <!--this is the root element of an html page-->
+    <head> <!--contains meta information of the html page-->
+        <meta charset="UTF-8"> <!--this make possible to use characters and emojis which not including in traditional ASCII character set-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--this tag is crucial for creating responsive web designs
+        which works on various devices.viewport is the user's visible area.
+        Width=device-width,sets the width of the page according to the width of the device. 
+        Initial-scale sets initial zoom level when the page is first loaded by the browser-->
+        <title>Marine Archaeology</title> <!--title of the html page-->
+        <link rel="stylesheet" href="page2.css"> <!--link to external style sheet for page-->
+        <link rel="stylesheet" href="template.css"> <!--link to external style sheet for template-->
+    </head>
+    <body id="page2-body"> <!--visible part of the page-->
+        <header> <!--header of the web page-->
+            <div class="logo"> <!--logo of the website-->
+               <img src="logo.png" alt="Life-Below-Water-logo">
+               <h1>Life Below Water</h1>   
+            </div>     
+            <nav class="nav"> <!--navigation bar of the website-->
+                <div class="nav-toggle" id="nav-toggle" aria-hidden="true">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </div>
+                <ul class="nav-menu">
+                   <li><a href="home.html" class="active">Home</a></li> <!--link to home page-->
+                   <li><a href="gallery.html">Gallery</a></li> <!--link to gallery-->
+                   <li><a href="shop.html">Shop</a></li>  <!--link to shop-->
+                   <li><a href="profile.html">Profile</a></li>  <!--link to profile-->
+                   <li><a href="feedback.html">Feedback</a></li> <!--link to feedback-->
+                   <li><a href="sitemap.html">Sitemap</a></li>  <!--link to sitemap-->
+                   <li><a href="team.html">Team</a></li>  <!--link to team-->
+                </ul>
+            </nav>
+        </header>
+        <div class="marine-title"> <!--content-->
+            <div id="content1"  class="cont">
+                <h1>Marine Archaeology</h1>
+                <p>Marine archaeology is a scientific field of study based on past human cultures and the sea to explore 
+                    how humans have interacted with the world's oceans. This study is mainly concerned with the documentation, 
+                    investigation, and recovery of material remains in oceans. Marine cultural heritage symbolizes the relationship between 
+                    human beings and oceans.
+                </p>     
+                <P>
+                    Marine exploration became most popular in the postwar period with the invention of SCUBA equipment. As a result, people tend to 
+                    dive in the sea as a sport. Gradually, it increases the curiosity of humans about marine culture. Then people began to discover 
+                    shipwrecks and the artifacts they contained. Important sources of information are sunken ships, cargo, tools and anchors lost 
+                    in oceans. Shipwrecks and the artifacts they contained are the most popular type of marine cultural heritage investigated.
+                </P>   
+                <p>
+                    Even though it is interesting to explore oceans, because of the expensiveness of the equipment that has the ability to withstand 
+                    the salty water and the complex technology use to deal with the unrevealed mysterious marine world, this field of study 
+                    is relatively expensive.
+                </p>
+                <br>
+            </div>    
+            <div id="content2" class="cont">   <!--container for images  and sub-content-->
+                <img src="pageimg3.png" alt="sea-dive" class="marineArcheo">
+                <img src="pageimg2.png" alt="ruin-in-sea" class="marineArcheo">
+                <img src="pageimg8.png" alt="shipwreck" class="marineArcheo">
+                <div id="subcontent2">
+                    <h3>The Most Famous Shipwrecks Ever Found</h3>
+                    <ul>
+                        <li>The Mary Rose (1545)</li>
+                        <li>Queen Anne's Revenge (1718)</li>
+                        <li>HMS Victory (1744)</li>
+                        <li>RMS Titanic (1912)</li>
+                        <li>RMS Lusitania (1935)  </li>
+                    </ul>
+                    <h3>Strangest Things Found in the Ocean</h3>
+                    <ul>
+                        <li>An underwater river - Optical illusion(Cenote Angelita Cave)</li>
+                        <li>Jesus statue (Mediterranean seabed 1954)</li>
+                        <li>Statues</li>
+                        <li>Airplanes</li>
+                        <li>Trucks</li>
+                        <li>Ferries</li>
+                        <li>Sunken submarines</li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+        <script>
+            // Add event listener to nav toggle button
+            document.getElementById('nav-toggle').addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.toggle('show');
+            });
+        </script>
+        <footer> <!--footer of the webpage-->
+            <p>&copy; 2024 SDG Website. All rights reserved.</p>
+            <p>Created by: <a href="editor1.html" target="_blank">Student 1</a> | <a href="editor2.html" target="_blank">Student 2</a> | <a href="editor3.html" target="_blank">Student 3</a> | <a href="editor4.html" target="_blank">Student 4</a></p> <!--links to editor pages-->
+        </footer>
+    </body>
+</html>   
